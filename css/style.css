@@ -1,0 +1,92 @@
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  padding: 2px 60px;
+  background-color: #efefef;
+}
+
+h2 {
+  text-decoration: underline;
+  margin-top:40px;
+}
+
+h3 {
+  color: #475dab;
+}
+
+section {
+  margin-bottom: 60px;
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+#employeeTable {
+  font-size: 12px;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 0px;
+}
+
+#employeeTable th {
+  font-size: 13px;
+  font-weight: bold;
+  background: #b9c9fe;
+  border-top: 4px solid #aabcfe;
+  border-bottom: 1px solid #fff;
+  color: #000;
+  padding: 8px;
+}
+
+#employeeTable td {
+  background: #e8edff;
+  border-bottom: 1px solid #fff;
+  color: #000;
+  border-top: 1px solid transparent;
+  padding: 8px;
+}
+
+#employeeTable tr:hover td {
+  background-color: #d0dafd;
+}
+
+
+input[type="text"] {
+  background-color: #efefef;
+  /*display: block;*/
+  margin: 15px 20px;
+  width: 30%;
+  font-size: 18px;
+  padding: 7px;
+  border-radius: 4px;
+  border: none;
+}
+
+button {
+    background-color: #475dab;
+    border: none;
+    color: white;
+    padding: 9px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+  background-color: #6a7fca;
+}
+
+#outputEmpList p {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+}
+
+.label {
+  font-weight: bold;
+  padding:0 5px;
+}
