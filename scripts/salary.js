@@ -10,8 +10,7 @@ var addEmp = function(){
   var lastName = document.getElementById('lastNameIn').value;
   var jobTitle = document.getElementById('jobTitleIn').value;
   var salary = document.getElementById('salaryIn').value;
-  // clear form after submission
-  document.getElementById('employeeform').reset();
+
   // add new employee
   var newEmp = {
     idNum: Number(idNum),
@@ -26,9 +25,12 @@ var addEmp = function(){
   console.log('new employee list working: ' + empList);
 
   // add new employee salary to totalSalaries and append to DOM
-  totalSalaries += newEmp.salary;
+  totalSalaries += newEmp.salary / 12;
   document.getElementById('outputTotalSalaries').innerHTML = totalSalaries;
   console.log('total salaries: ' + totalSalaries);
+
+  // clear form after submission
+  document.getElementById('employeeform').reset();
 };
 
 console.log('array length: ' + empList.length);
@@ -54,12 +56,14 @@ var deleteEmp = function(){
     if(empList[i].idNum == deleteIdNum){
       console.log('accessing employee id correctly: ' + empList[i].idNum);
       // subtract deleted employee's salary from the total
-      totalSalaries = totalSalaries - empList[i].salary;
+      totalSalaries -= empList[i].salary / 12;
       // update new salary total
       document.getElementById('outputTotalSalaries').innerHTML = totalSalaries;
       // update DOM list of employees
       empList.splice(i,1);
       empToDOM();
+      // clear form after submission
+      document.getElementById('deleteEmpForm').reset();
     }
   }
 };
