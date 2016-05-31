@@ -17,7 +17,7 @@
         Last Name:<input type="text" name="field"  id="lastNameIn" value="" required>
         Job Title:<input type="text" name="field"  id="jobTitleIn" value="" required><br/>
         Salary:<input type="text" name="field"  id="salaryIn" value="" required>
-        <button type="button" name="addEmpButton" onclick="addEmp(); validateForm();" value="Reset Form">Add Employee</button>
+        <button type="button" name="addEmpButton" onclick="addEmp();" value="Reset Form">Add Employee</button>
       </form>
       <h2>Employee List</h2>
       <table id="employeeTable">
@@ -37,8 +37,10 @@
       <h3>Total Monthly Salaries: <span id="outputTotalSalaries"></span></h3>
       <h2>Delete Employee</h2>
       <p>Enter employee ID number to delete employee:</p>
-      ID Number:<input type="text" name="inputName" id="deleteIdNumIn" value="">
-      <button type="button" name="deleteEmpButton" onclick="deleteEmp();">Delete Employee</button>
+      <form id="deleteEmpForm">
+        ID Number:<input type="text" name="inputName" id="deleteIdNumIn" value="">
+        <button type="button" name="deleteEmpButton" onclick="deleteEmp();" value="Reset Form">Delete Employee</button>
+    </form>
     </section>
   </body>
 </html>
